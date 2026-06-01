@@ -1,0 +1,455 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(245, 197, 66, 0.24), transparent 280px),
+        radial-gradient(circle at bottom right, rgba(0, 91, 170, 0.18), transparent 320px),
+        #eef4ff;
+    color: #10264d;
+}
+
+header {
+    background: linear-gradient(90deg, #001943, #004f9f, #001943);
+    color: white;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.top-line {
+    padding: 8px 25px;
+    background-color: #001335;
+    font-size: 14px;
+}
+
+.right {
+    float: right;
+}
+
+nav {
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.logo-box {
+    background: white;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #f5c542;
+}
+
+.logo-box img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 32px;
+    text-shadow: 2px 2px #001335;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0 0 0 auto;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 5px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 8px 13px;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background-color: #f5c542;
+    color: #002b65;
+}
+
+main {
+    max-width: 1180px;
+    margin: auto;
+}
+
+.hero {
+    margin: 25px 10px;
+    padding: 42px;
+    min-height: 430px;
+    background:
+        linear-gradient(rgba(0, 24, 68, 0.82), rgba(0, 76, 159, 0.78)),
+        url("https://documents.iplt20.com/ipl/MI/Banner/MIbanner.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    border: 5px solid #f5c542;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 31, 79, 0.36);
+}
+
+.hero h2 {
+    font-size: 58px;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.small-title {
+    color: #f5c542;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+button,
+.shop-button {
+    background: linear-gradient(to bottom, #ffe477, #f5c542);
+    color: #003b7a;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 0 #a77a00;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover,
+.shop-button:hover {
+    background: white;
+}
+
+#join-message {
+    font-weight: bold;
+    color: #ffeb91;
+}
+
+.poster {
+    background: rgba(255, 255, 255, 0.92);
+    color: #003b7a;
+    text-align: center;
+    padding: 28px;
+    border-radius: 10px;
+    border: 3px dashed #f5c542;
+    align-self: center;
+}
+
+.trophy {
+    background-color: #003b7a;
+    color: #f5c542;
+    display: inline-block;
+    padding: 9px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+section {
+    margin: 30px 10px;
+    padding: 25px;
+    background-color: white;
+    border: 2px solid #d4e1ff;
+    border-radius: 10px;
+    box-shadow: 0 5px 16px rgba(0, 31, 79, 0.12);
+}
+
+section h2 {
+    color: #003b7a;
+    border-bottom: 4px solid #f5c542;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.champion-grid,
+.cards,
+.gallery,
+.shop-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.champion-card,
+article {
+    background: linear-gradient(#eef5ff, #ffffff);
+    border: 2px solid #003b7a;
+    padding: 18px;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.champion-card:hover,
+article:hover,
+.player-card:hover,
+.gallery figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 31, 79, 0.22);
+}
+
+.champion-card p {
+    color: #b98a00;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.champion-card span {
+    color: #3d5475;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.update-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 3px solid #f5c542;
+    background-color: #d4e1ff;
+}
+
+.date,
+.section-intro {
+    color: #49617d;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th {
+    background-color: #003b7a;
+    color: white;
+}
+
+th,
+td {
+    border: 1px solid #777;
+    padding: 12px;
+    text-align: left;
+}
+
+.role-heading {
+    background: linear-gradient(90deg, #003b7a, #0075d4);
+    color: white;
+    padding: 12px 16px;
+    border-left: 6px solid #f5c542;
+    border-radius: 6px;
+    margin-top: 30px;
+}
+
+.player-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.player-card {
+    background: linear-gradient(#ffffff, #e8f0ff);
+    border: 2px solid #003b7a;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 31, 79, 0.15);
+    transition: 0.2s;
+    position: relative;
+}
+
+.player-card::before {
+    content: "MI";
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: #f5c542;
+    color: #003b7a;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.player-card.captain::after {
+    content: "Captain";
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: #003b7a;
+    color: #f5c542;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.player-card img {
+    width: 100%;
+    height: 245px;
+    object-fit: cover;
+    object-position: top center;
+    background: linear-gradient(135deg, #003b7a, #0075d4);
+    border-bottom: 5px solid #f5c542;
+}
+
+.player-card h3 {
+    margin: 14px 8px 5px;
+    color: #003b7a;
+    min-height: 45px;
+}
+
+.player-card p {
+    margin: 0 8px 16px;
+    color: #b98a00;
+    font-weight: bold;
+}
+
+.player-card .image-fallback {
+    height: 245px;
+    background: linear-gradient(135deg, #003b7a, #0075d4);
+    color: #f5c542;
+    border-bottom: 5px solid #f5c542;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 44px;
+    font-weight: bold;
+}
+
+.shop-box {
+    background: linear-gradient(120deg, #002b65, #0064bd);
+    color: white;
+    border-radius: 10px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.shop-items div {
+    min-height: 120px;
+    background-color: white;
+    color: #003b7a;
+    border: 3px solid #f5c542;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+}
+
+.gallery figure {
+    margin: 0;
+    background-color: #eaf1ff;
+    border: 2px solid #003b7a;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.gallery img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery figcaption {
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    color: #003b7a;
+}
+
+footer {
+    background: linear-gradient(90deg, #001335, #002b65);
+    color: white;
+    padding: 24px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+footer a {
+    color: #f5c542;
+    display: inline-block;
+    margin: 8px 10px;
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .hero,
+    .shop-box {
+        grid-template-columns: 1fr;
+    }
+
+    .player-list,
+    .champion-grid,
+    .cards,
+    .gallery,
+    .shop-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .player-list,
+    .champion-grid,
+    .cards,
+    .gallery,
+    .shop-items {
+        grid-template-columns: 1fr;
+    }
+
+    .right {
+        float: none;
+        display: block;
+        margin-top: 6px;
+    }
+
+    nav ul {
+        margin-left: 0;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+}
